@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Yapılacaklar Listesi</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">Çıkış</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let task of tasks" (click)="viewTask(task)">
+      <ion-label>
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.time }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  
+
+  
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="goToAddTask()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

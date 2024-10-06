@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Yeni Görev Ekle</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Çıkış</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Başlık</ion-label>
+    <ion-input [(ngModel)]="task.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Konum</ion-label>
+    <ion-input [(ngModel)]="task.location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Tarih</ion-label>
+    <ion-input [(ngModel)]="task.date" type="date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Saat</ion-label>
+    <ion-input [(ngModel)]="task.time" type="time"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Açıklama</ion-label>
+    <ion-textarea [(ngModel)]="task.description"></ion-textarea>
+  </ion-item>
+  <ion-button expand="full" routerLink="/home" (click)="addTask()">Ekle</ion-button>
+</ion-content>

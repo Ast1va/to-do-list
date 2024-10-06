@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title class="ion-text-center">Giriş</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <div data-mdb-input-init class="form-outline mb-4">
+    <ion-item lines="none">
+      <ion-label position="floating">Email adresinizi girin</ion-label>
+      <ion-input [(ngModel)]="email" type="email" id="loginName" class="form-control"></ion-input>
+    </ion-item>
+  </div>
+
+  
+  <div data-mdb-input-init class="form-outline mb-4">
+    <ion-item lines="none">
+      <ion-label position="floating">Şifre</ion-label>
+      <ion-input [(ngModel)]="password" type="password" id="loginPassword" class="form-control"></ion-input>
+    </ion-item>
+  </div>
+
+  
+  <ion-button expand="block" color="success" (click)="login()">Giriş Yap</ion-button> 
+
+  
+  <div class="text-center">
+    <p>Kullanıcı değil misiniz? <a routerLink="/register">Kayıt olun</a></p>
+  </div>
+</ion-content>

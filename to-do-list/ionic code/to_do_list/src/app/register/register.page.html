@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title>Kayıt Sayfası</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+  
+    <div data-mdb-input-init class="form-outline mb-4">
+      <ion-item>
+        <ion-label position="floating">İsim</ion-label>
+        <ion-input [(ngModel)]="formData.user_name"></ion-input>
+      </ion-item>
+    </div>
+
+    
+    <div data-mdb-input-init class="form-outline mb-4">
+      <ion-item>
+        <ion-label position="floating">Şifre</ion-label>
+        <ion-input type="password" [(ngModel)]="formData.password"></ion-input>
+      </ion-item>
+    </div>
+
+   
+    <div data-mdb-input-init class="form-outline mb-4">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="formData.email"></ion-input>
+      </ion-item>
+    </div>
+  </ion-list>
+
+ 
+  <ion-button expand="block" color="success" (click)="create()" routerLink="/login">Kullanıcı Oluştur</ion-button>
+
+  <ion-button expand="block" color="danger" routerLink="/login">Geri gel</ion-button>
+</ion-content>

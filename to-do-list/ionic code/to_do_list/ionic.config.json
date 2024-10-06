@@ -1,0 +1,17 @@
+{
+  "name": "to_do_list",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "loginApp": {
+    "name": "loginApp",
+    "type": "angular",
+    "proxies": [
+      {
+        "path": "/todolist",
+        "proxyUrl": "http://localhost/todolist"
+      }
+    ]
+  }
+}
